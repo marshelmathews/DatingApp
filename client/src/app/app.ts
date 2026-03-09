@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, signal } from '@angular/core';
 import { Nav } from "../layout/nav/nav";
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 
 
 @Component({
@@ -14,5 +14,6 @@ export class App {
 
   private http = inject(HttpClient);
   protected readonly title = signal('Dating app');
+  protected router = inject(Router);
 
 }
